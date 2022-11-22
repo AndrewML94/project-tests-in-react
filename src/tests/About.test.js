@@ -1,15 +1,10 @@
 import { screen } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
 import renderWithRouter from '../renderWithRouter';
-import App from '../App';
+import { About } from '../pages';
 
 describe('Testa o componente <About.js />.', () => {
   it('Testa se o topo da aplicação contém um conjunto fixo de links de navegação.', () => {
-    const { history } = renderWithRouter(<App />);
-
-    act(() => {
-      history.push('/about');
-    });
+    renderWithRouter(<About />);
 
     const aboutText = screen.getByRole('heading', { name: 'About Pokédex' });
     const p1 = screen.getByText('This application simulates a Pokédex, a digital encyclopedia containing all Pokémon');
