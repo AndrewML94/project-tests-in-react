@@ -3,8 +3,8 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-describe('Teste se o topo da aplicação contém um conjunto fixo de links de navegação.', () => {
-  it('Testa se o topo da aplicação contém um conjunto fixo de links de navegação.', () => {
+describe('Testa o componente <App.js />.', () => {
+  it('Teste se o topo da aplicação contém um conjunto fixo de links de navegação.', () => {
     const { history } = renderWithRouter(<App />);
 
     const homeText = screen.getByRole('link', { name: 'Home' });
